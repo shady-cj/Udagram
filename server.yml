@@ -88,7 +88,6 @@ Resources:
           cd /var/www/html
           echo "it works! Udagram, Udacity" > index.html
       ImageId: !Ref AMIToUse
-      KeyName: vockey
       SecurityGroups:
         - !Ref WebServerSecurityGroup
         
@@ -173,7 +172,7 @@ Outputs:
 
   LoadBalancerUrl:
     Description: Reference to the load balabcer url
-    Value: !Sub "http://${!GetAtt WebAppLoadBalancer.DNSName}"
+    Value: !Join ["", ["http://",!GetAtt WebAppLoadBalancer.DNSName]]
     Export:
       Name: !Sub "${EnvironmentName}-LBUrl"
 
