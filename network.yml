@@ -1,0 +1,31 @@
+Parameters:
+  EnvironmentName:
+    Description: The environment name for the infrastructure
+    Type: String
+
+  VpcCIDR:
+    Description: The vpc cidr block ip definition
+    Type: String
+    Default: 10.0.0.0/16
+  
+  PublicSubnet1CIDR:
+    Description: The public subnet-1 cidr ipaddress
+    Type: String
+    Default: 10.0.0.0/24
+  
+  PublicSubnet2CIDR:
+    Description: The public subnet-2 cidr ipaddress
+    Type: String 
+    Default: 10.0.1.0/24
+
+  PrivateSubnet1CIDR:
+    Description: The private subnet-1 cidr ip address
+    Type: String
+    Default: 10.0.2.0/24
+
+  PrivateSubnet2CIDR:
+    Description: The private subnet-2 cidr ip address
+    Type: String
+    Default: 10.0.3.0/24
+
+
